@@ -1,0 +1,54 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1511339256800649999
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1511339256800649998}
+  - component: {fileID: 1511339256800649997}
+  m_Layer: 0
+  m_Name: Mesh Gizmos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1511339256800649998
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1511339256800649999}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1511339256800649997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1511339256800649999}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d033d3eb2b28e72478525a18e0a74bc6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab_ray: {fileID: 2257343197316327891, guid: a41730eeade3dd14fbad54556854afa7,
+    type: 3}
+  prefab_arrowHead: {fileID: 6964415854984702685, guid: 0fd9004fa7674474bb5a7f4cbd7692c2,
+    type: 3}
+  prefab_cube: {fileID: 799129055869716120, guid: d8c408357c63c6f499ca6c52030cd1c8,
+    type: 3}
+  prefab_sphere: {fileID: 7235411198105267695, guid: 927f24e0e5bfd2040bee2de16062105c,
+    type: 3}
+  active: 1
