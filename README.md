@@ -16,7 +16,7 @@ C#
 
 <!-- USAGE EXAMPLES -->
 ## Usage
-See [ExampleGizmoCalls.cs](https://github.com/Genso-0/Mesh-Gizmos/blob/master/Assets/Mesh%20Gizmos/ExampleGizmoCalls.cs) for usage examples.
+See [ExampleGizmoCalls.cs](https://github.com/Genso-0/Mesh-Gizmos/blob/master/Assets/Scripts/ExampleGizmoCalls.cs) for usage examples.
 
 <!-- LICENSE -->
 ## License
