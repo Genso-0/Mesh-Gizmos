@@ -11,6 +11,6 @@ Distributed under the MIT License. See `LICENSE` for more information.
 <!-- CONTACT -->
 ## Contact
 
-[@your_twitter](https://twitter.com/genso_0)
+[@genso_0](https://twitter.com/genso_0)
 
 Project Link: [https://github.com/your_username/repo_name](https://github.com/Genso-0/Mesh-Gizmos)
