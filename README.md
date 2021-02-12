@@ -1,10 +1,12 @@
 <!-- ABOUT THE PROJECT -->
-## Mesh-Gizmos
+## Mesh-Gizmos for Unity 
 A collection of functions that imitate Unity's gizmo functionality using transforms and meshes.
 ![alt text](https://github.com/Genso-0/Mesh-Gizmos/blob/master/Assets/Mesh%20Gizmos/Info/Images/Gizmos.PNG)
 
 ### Built With
 Unity 2020.1.4f1
+### Language
+C#
 
 <!-- GETTING STARTED -->
 ## Getting Started
