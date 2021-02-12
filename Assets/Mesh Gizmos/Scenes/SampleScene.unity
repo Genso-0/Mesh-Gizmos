@@ -925,7 +925,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1511339256800649999, guid: 7025213ac5f3e3044849d113715dbec9, type: 3}
       propertyPath: m_Name
-      value: Mesh Gizmos Manager
+      value: Mesh Gizmos
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7025213ac5f3e3044849d113715dbec9, type: 3}
