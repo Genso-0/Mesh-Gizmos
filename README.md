@@ -6,7 +6,7 @@ A collection of functions that imitate Unity's gizmo functionality using transfo
 <!-- LICENSE -->
 ## License
 
-Distributed under the MIT License. See `LICENSE` for more information.
+Distributed under the MIT License. See [LICENSE](https://github.com/Genso-0/Mesh-Gizmos/blob/master/LICENSE) for more information.
 
 <!-- CONTACT -->
 ## Contact
