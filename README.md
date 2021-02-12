@@ -13,4 +13,4 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 [@genso_0](https://twitter.com/genso_0)
 
-Project Link: [https://github.com/your_username/repo_name](https://github.com/Genso-0/Mesh-Gizmos)
+Project Link: [Mesh-Gizmos](https://github.com/Genso-0/Mesh-Gizmos)
