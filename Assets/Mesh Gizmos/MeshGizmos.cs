@@ -57,11 +57,19 @@ namespace Mesh_Gizmos
         }
         void Update()
         {
-            if (needsClearing)
-                Clear();
-            if (active)
-                Draw();
-            else if (buffer_rays.Count > 0)
+            if (initialized)
+            {
+                if (needsClearing)
+                    Clear();
+                if (active)
+                    Draw();
+                else if (buffer_rays.Count > 0)
+                    PurgeBuffers();
+            }
+        }
+        void OnApplicationQuit()
+        {
+            if (initialized)
                 PurgeBuffers();
         }
         public void DrawRay(Vector3 origin, Vector3 direction, Color32 color, float radius = 0.01f)
@@ -181,10 +189,10 @@ namespace Mesh_Gizmos
                 gizmo.transform.localScale = Vector3.one * scale;
                 gizmo.transform.position = startPosition;
                 gizmo.GetComponent<MeshRenderer>().material.color = color;
-                if (dir!=Vector3.zero)
+                if (dir != Vector3.zero)
                 {
                     gizmo.transform.rotation = Quaternion.LookRotation(dir);
-                } 
+                }
             }
         }
     }
