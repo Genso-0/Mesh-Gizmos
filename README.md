@@ -20,7 +20,7 @@ C#
 For use with HDRP some extra steps are needed. 
 1) Find gizmo material 
 2) Select shader tab ->HDRP -> Lit 
-
+[Picture guide for HDRP](https://github.com/Genso-0/Mesh-Gizmos/tree/master/Assets/Mesh_Gizmos/Project%20Information/Working%20with%20HDRP)
 <!-- USAGE EXAMPLES -->
 ## Usage
 See [ExampleGizmoCalls.cs](https://github.com/Genso-0/Mesh-Gizmos/blob/master/Assets/Mesh_Gizmos/Scripts/ExampleGizmoCalls.cs) for usage examples.
