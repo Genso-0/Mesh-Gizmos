@@ -24,7 +24,7 @@ namespace Mesh_Gizmos
             //Combine Gizmos
             var arrowStart = transform.position - transform.right + (transform.forward * 1.5f);
             var arrowDirection = transform.right;
-            _Gizmos.DrawRay(arrowStart, arrowDirection, Color.magenta);
+            _Gizmos.DrawRay(arrowStart, arrowDirection, Color.cyan);
             _Gizmos.DrawArrowHead(arrowStart + arrowDirection, arrowDirection, Color.white);
         }
     }

@@ -25,6 +25,7 @@ namespace Mesh_Gizmos
         }
         public bool initialized { get; private set; }
         #endregion
+        public Material material_main;
         public ProceduralMesh_RayGizmo prefab_ray;
         public GameObject prefab_arrowHead;
         public GameObject prefab_cube;
@@ -96,14 +97,22 @@ namespace Mesh_Gizmos
         private void Draw()
         {
             int index = 0;
+            //while (gizmos_rays.Count < buffer_rays.Count)
+            //    gizmos_rays.Add(Instantiate(prefab_ray, transform));
+            //while (gizmos_arrowHeads.Count < buffer_arrowHeads.Count)
+            //    gizmos_arrowHeads.Add(Instantiate(prefab_arrowHead, transform));
+            //while (gizmos_cubes.Count < buffer_cubes.Count)
+            //    gizmos_cubes.Add(Instantiate(prefab_cube, transform));
+            //while (gizmos_spheres.Count < buffer_spheres.Count)
+            //    gizmos_spheres.Add(Instantiate(prefab_sphere, transform));
             while (gizmos_rays.Count < buffer_rays.Count)
-                gizmos_rays.Add(Instantiate(prefab_ray, transform));
+                AddInstance_Ray();
             while (gizmos_arrowHeads.Count < buffer_arrowHeads.Count)
-                gizmos_arrowHeads.Add(Instantiate(prefab_arrowHead, transform));
+                AddInstance_ArrowHead();
             while (gizmos_cubes.Count < buffer_cubes.Count)
-                gizmos_cubes.Add(Instantiate(prefab_cube, transform));
+                AddInstance_Cube();
             while (gizmos_spheres.Count < buffer_spheres.Count)
-                gizmos_spheres.Add(Instantiate(prefab_sphere, transform));
+                AddInstance_Sphere();
             while (buffer_rays.Count > 0)
             {
                 buffer_rays.Dequeue().Draw(gizmos_rays[index]);
@@ -149,6 +158,31 @@ namespace Mesh_Gizmos
             while (buffer_spheres.Count > 0) buffer_spheres.Dequeue();
         }
 
+        void AddInstance_Ray()
+        {
+            var instance = Instantiate(prefab_ray, transform);
+            instance.material = instance.GetComponent<MeshRenderer>().material; 
+            instance.material.CopyPropertiesFromMaterial(material_main);
+            gizmos_rays.Add(instance);
+        }
+        void AddInstance_ArrowHead()
+        {
+            var instance = Instantiate(prefab_arrowHead, transform);
+            instance.GetComponent<MeshRenderer>().material.CopyPropertiesFromMaterial(material_main);
+            gizmos_arrowHeads.Add(instance);
+        }
+        void AddInstance_Cube()
+        {
+            var instance = Instantiate(prefab_cube, transform);
+            instance.GetComponent<MeshRenderer>().material.CopyPropertiesFromMaterial(material_main); 
+            gizmos_cubes.Add(instance);
+        }
+        void AddInstance_Sphere()
+        {
+            var instance = Instantiate(prefab_sphere, transform);
+            instance.GetComponent<MeshRenderer>().material.CopyPropertiesFromMaterial(material_main);
+            gizmos_spheres.Add(instance);
+        }
         readonly struct RayCommandData
         {
             public RayCommandData(Vector3 startPosition, Vector3 dir, Color32 color, float radius)

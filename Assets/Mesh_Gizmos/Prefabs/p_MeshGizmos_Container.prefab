@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1511339256800649998}
   - component: {fileID: 1511339256800649997}
   m_Layer: 0
-  m_Name: Mesh Gizmos
+  m_Name: p_MeshGizmos_Container
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -43,12 +43,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d033d3eb2b28e72478525a18e0a74bc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefab_ray: {fileID: 2257343197316327891, guid: a41730eeade3dd14fbad54556854afa7,
-    type: 3}
-  prefab_arrowHead: {fileID: 6964415854984702685, guid: 0fd9004fa7674474bb5a7f4cbd7692c2,
-    type: 3}
-  prefab_cube: {fileID: 799129055869716120, guid: d8c408357c63c6f499ca6c52030cd1c8,
-    type: 3}
-  prefab_sphere: {fileID: 7235411198105267695, guid: 927f24e0e5bfd2040bee2de16062105c,
-    type: 3}
+  material_main: {fileID: 2100000, guid: fdf571f9c765baa4f92616e3752725bb, type: 2}
+  prefab_ray: {fileID: 2257343197316327891, guid: a41730eeade3dd14fbad54556854afa7, type: 3}
+  prefab_arrowHead: {fileID: 6964415854984702685, guid: 0fd9004fa7674474bb5a7f4cbd7692c2, type: 3}
+  prefab_cube: {fileID: 799129055869716120, guid: d8c408357c63c6f499ca6c52030cd1c8, type: 3}
+  prefab_sphere: {fileID: 7235411198105267695, guid: 927f24e0e5bfd2040bee2de16062105c, type: 3}
   active: 1
