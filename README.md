@@ -19,11 +19,13 @@ C#
 
 For use with HDRP some extra steps are needed. 
 1) Find gizmo material
+<img align="left" width="100" height="100">
 ![alt text](https://github.com/Genso-0/Mesh-Gizmos/blob/master/Assets/Mesh_Gizmos/Project%20Information/Working%20with%20HDRP/1FindGizmoMaterial.PNG)
 
 
 
 2) Select shader tab ->HDRP -> Lit
+<img align="left" width="100" height="100">
 ![alt text](https://github.com/Genso-0/Mesh-Gizmos/blob/master/Assets/Mesh_Gizmos/Project%20Information/Working%20with%20HDRP/2MaterialWithError.PNG)
 
 
