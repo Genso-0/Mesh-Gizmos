@@ -24,10 +24,9 @@ namespace Mesh_Gizmos
             tris = new int[indexCount];
             uvs = new Vector2[vertCount];
         }
-        public void Draw(Vector3 start, Vector3 end, Color32 color, float radius)
+        public void Draw(Vector3 start, Vector3 end, float radius)
         {
-            BuildMesh_Cylinder(start, end, radius); 
-            material.color = color;
+            BuildMesh_Cylinder(start, end, radius);  
         }
         public void BuildMesh_Cylinder(Vector3 start, Vector3 end, float radius)
         {

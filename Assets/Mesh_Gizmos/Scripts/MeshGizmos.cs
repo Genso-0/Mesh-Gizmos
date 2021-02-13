@@ -1,6 +1,8 @@
 ﻿
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering;
+
 namespace Mesh_Gizmos
 {
     public class MeshGizmos : MonoBehaviour
@@ -192,9 +194,11 @@ namespace Mesh_Gizmos
             public void Draw(ProceduralMesh_RayGizmo gizmo)
             {
                 gizmo.gameObject.SetActive(true);
-                gizmo.Draw(startPosition, dir, color, radius);
+                gizmo.Draw(startPosition, dir, radius);
+                gizmo.material.SetColor("_BaseColor", color);
             }
         }
+        
         readonly struct ShapeCommandData
         {
             public ShapeCommandData(Vector3 position, Vector3 dir, Color32 color, float scale)
@@ -214,7 +218,7 @@ namespace Mesh_Gizmos
                 gizmo.gameObject.SetActive(true);
                 gizmo.transform.localScale = Vector3.one * scale;
                 gizmo.transform.position = startPosition;
-                gizmo.GetComponent<MeshRenderer>().material.color = color;
+                gizmo.GetComponent<MeshRenderer>().material.SetColor("_BaseColor", color);
                 if (dir != Vector3.zero)
                 {
                     gizmo.transform.rotation = Quaternion.LookRotation(dir);
