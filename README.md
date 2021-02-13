@@ -18,20 +18,9 @@ C#
 4) If you would like to use your own material then you can add it to the Material reference in Mesh Gizmos Container prefab.
 
 For use with HDRP some extra steps are needed. 
-1) Find gizmo material
-<img align="left" width="100" height="100">
-![alt text](https://github.com/Genso-0/Mesh-Gizmos/blob/master/Assets/Mesh_Gizmos/Project%20Information/Working%20with%20HDRP/1FindGizmoMaterial.PNG)
+1) Find gizmo material 
+2) Select shader tab ->HDRP -> Lit 
 
-
-
-2) Select shader tab ->HDRP -> Lit
-<img align="left" width="100" height="100">
-![alt text](https://github.com/Genso-0/Mesh-Gizmos/blob/master/Assets/Mesh_Gizmos/Project%20Information/Working%20with%20HDRP/2MaterialWithError.PNG)
-
-
-
-3)Material should now look like this
-![alt text](https://github.com/Genso-0/Mesh-Gizmos/blob/master/Assets/Mesh_Gizmos/Project%20Information/Working%20with%20HDRP/3MaterialWithNoErrorReadyForHDRP.PNG)
 <!-- USAGE EXAMPLES -->
 ## Usage
 See [ExampleGizmoCalls.cs](https://github.com/Genso-0/Mesh-Gizmos/blob/master/Assets/Mesh_Gizmos/Scripts/ExampleGizmoCalls.cs) for usage examples.
