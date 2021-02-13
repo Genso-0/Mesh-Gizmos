@@ -21,8 +21,12 @@ For use with HDRP some extra steps are needed.
 1) Find gizmo material
 ![alt text](https://github.com/Genso-0/Mesh-Gizmos/blob/master/Assets/Mesh_Gizmos/Project%20Information/Working%20with%20HDRP/1FindGizmoMaterial.PNG)
 
+
+
 2) Select shader tab ->HDRP -> Lit
 ![alt text](https://github.com/Genso-0/Mesh-Gizmos/blob/master/Assets/Mesh_Gizmos/Project%20Information/Working%20with%20HDRP/2MaterialWithError.PNG)
+
+
 
 3)Material should now look like this
 ![alt text](https://github.com/Genso-0/Mesh-Gizmos/blob/master/Assets/Mesh_Gizmos/Project%20Information/Working%20with%20HDRP/3MaterialWithNoErrorReadyForHDRP.PNG)
