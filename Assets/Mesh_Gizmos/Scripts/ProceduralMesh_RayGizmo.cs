@@ -15,8 +15,7 @@ namespace Mesh_Gizmos
         readonly int resolution = 20;  
         [HideInInspector] public Material material;
         void Awake()
-        {
-            //material = GetComponent<MeshRenderer>().material; 
+        { 
             meshFilter = GetComponent<MeshFilter>();
             GetComponent<MeshRenderer>().shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
             var vertCount = (resolution + 2) * 2;

@@ -96,15 +96,7 @@ namespace Mesh_Gizmos
         }
         private void Draw()
         {
-            int index = 0;
-            //while (gizmos_rays.Count < buffer_rays.Count)
-            //    gizmos_rays.Add(Instantiate(prefab_ray, transform));
-            //while (gizmos_arrowHeads.Count < buffer_arrowHeads.Count)
-            //    gizmos_arrowHeads.Add(Instantiate(prefab_arrowHead, transform));
-            //while (gizmos_cubes.Count < buffer_cubes.Count)
-            //    gizmos_cubes.Add(Instantiate(prefab_cube, transform));
-            //while (gizmos_spheres.Count < buffer_spheres.Count)
-            //    gizmos_spheres.Add(Instantiate(prefab_sphere, transform));
+            int index = 0; 
             while (gizmos_rays.Count < buffer_rays.Count)
                 AddInstance_Ray();
             while (gizmos_arrowHeads.Count < buffer_arrowHeads.Count)
