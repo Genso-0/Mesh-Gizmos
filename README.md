@@ -26,6 +26,8 @@ For use with HDRP some extra steps are needed.
 ## Usage
 See [ExampleGizmoCalls.cs](https://github.com/Genso-0/Mesh-Gizmos/blob/master/Assets/Mesh_Gizmos/Scripts/ExampleGizmoCalls.cs) for usage examples.
 
+Example solar system scene with bodies showing the gravitational force (red) excerted on them and their velocities (blue).
+![alt-text](https://github.com/Genso-0/Mesh-Gizmos/blob/master/Assets/Mesh_Gizmos/Scene%20assets/SolarSystem/Information/PpQdDzmjzB.gif)
 <!-- LICENSE -->
 ## License
 
