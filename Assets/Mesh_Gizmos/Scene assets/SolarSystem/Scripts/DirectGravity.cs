@@ -32,7 +32,7 @@ namespace Mesh_Gizmos.Examples
             _Gizmos.DrawRay(transform.position, gravitationalForce, Color.red);
             _Gizmos.DrawArrowHead(transform.position + gravitationalForce, gravitationalForce, Color.white);
             _Gizmos.DrawRay(transform.position, rb.velocity, Color.blue);
-            _Gizmos.DrawArrowHead(transform.position + rb.velocity, gravitationalForce, Color.white);
+            _Gizmos.DrawArrowHead(transform.position + rb.velocity, rb.velocity, Color.white);
         }
         void OnCollisionEnter(Collision collision)
         {
