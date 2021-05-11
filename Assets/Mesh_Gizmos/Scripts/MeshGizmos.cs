@@ -48,6 +48,8 @@ namespace Mesh_Gizmos
             if (!initialized)
             {
                 initialized = true;
+                DontDestroyOnLoad(this);
+
                 gizmos_rays = new List<ProceduralMesh_RayGizmo>();
                 gizmos_arrowHeads = new List<GameObject>();
                 gizmos_cubes = new List<GameObject>();
