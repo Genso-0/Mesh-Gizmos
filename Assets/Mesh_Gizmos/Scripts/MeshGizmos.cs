@@ -22,7 +22,7 @@ namespace Mesh_Gizmos
                     return null;
                 if (!m_Instance.initialized)
                     m_Instance.Init();
-                return m_Instance; 
+                return m_Instance;
             }
         }
         public bool initialized { get; private set; }
@@ -81,30 +81,30 @@ namespace Mesh_Gizmos
             if (initialized)
                 PurgeBuffers();
         }
-        public void DrawRay(Vector3 origin, Vector3 direction, Color32 color, float radius = 0.01f)
+        public void DrawRay(Vector3 origin, Vector3 direction, Color32 color, int layerMask, float radius = 0.01f)
         {
             var start = origin - transform.position;
-            buffer_rays.Enqueue(new RayCommandData(start, start + direction, color, radius));
+            buffer_rays.Enqueue(new RayCommandData(start, start + direction, color, layerMask, radius));
         }
-        public void DrawLine(Vector3 origin, Vector3 end, Color32 color, float radius = 0.01f)
+        public void DrawLine(Vector3 origin, Vector3 end, Color32 color, int layerMask, float radius = 0.01f)
         {
-            buffer_rays.Enqueue(new RayCommandData(origin - transform.position, end - transform.position, color, radius));
+            buffer_rays.Enqueue(new RayCommandData(origin - transform.position, end - transform.position, color, layerMask, radius));
         }
-        public void DrawArrowHead(Vector3 position, Vector3 direction, Color32 color, float scale = 0.1f)
+        public void DrawArrowHead(Vector3 position, Vector3 direction, Color32 color, int layerMask, float scale = 0.1f)
         {
-            buffer_arrowHeads.Enqueue(new ShapeCommandData(position, direction, color, scale));
+            buffer_arrowHeads.Enqueue(new ShapeCommandData(position, direction, color, layerMask, scale));
         }
-        public void DrawCube(Vector3 position, Vector3 direction, Color32 color, float scale = 0.1f)
+        public void DrawCube(Vector3 position, Vector3 direction, Color32 color, int layerMask, float scale = 0.1f)
         {
-            buffer_cubes.Enqueue(new ShapeCommandData(position, direction, color, scale));
+            buffer_cubes.Enqueue(new ShapeCommandData(position, direction, color, layerMask, scale));
         }
-        public void DrawSphere(Vector3 position, Vector3 direction, Color32 color, float scale = 0.1f)
+        public void DrawSphere(Vector3 position, Vector3 direction, Color32 color, int layerMask, float scale = 0.1f)
         {
-            buffer_spheres.Enqueue(new ShapeCommandData(position, direction, color, scale));
+            buffer_spheres.Enqueue(new ShapeCommandData(position, direction, color, layerMask, scale));
         }
         private void Draw()
         {
-            int index = 0; 
+            int index = 0;
             while (gizmos_rays.Count < buffer_rays.Count)
                 AddInstance_Ray();
             while (gizmos_arrowHeads.Count < buffer_arrowHeads.Count)
@@ -161,7 +161,7 @@ namespace Mesh_Gizmos
         void AddInstance_Ray()
         {
             var instance = Instantiate(prefab_ray, transform);
-            instance.material = instance.GetComponent<MeshRenderer>().material; 
+            instance.material = instance.GetComponent<MeshRenderer>().material;
             instance.material.CopyPropertiesFromMaterial(material_main);
             gizmos_rays.Add(instance);
         }
@@ -174,7 +174,7 @@ namespace Mesh_Gizmos
         void AddInstance_Cube()
         {
             var instance = Instantiate(prefab_cube, transform);
-            instance.GetComponent<MeshRenderer>().material.CopyPropertiesFromMaterial(material_main); 
+            instance.GetComponent<MeshRenderer>().material.CopyPropertiesFromMaterial(material_main);
             gizmos_cubes.Add(instance);
         }
         void AddInstance_Sphere()
@@ -185,45 +185,51 @@ namespace Mesh_Gizmos
         }
         readonly struct RayCommandData
         {
-            public RayCommandData(Vector3 startPosition, Vector3 dir, Color32 color, float radius)
+            public RayCommandData(Vector3 startPosition, Vector3 dir, Color32 color, int layerMask, float radius)
             {
                 this.startPosition = startPosition;
                 this.dir = dir;
                 this.color = color;
                 this.radius = radius;
+                this.layerMask = layerMask;
             }
             public readonly Vector3 startPosition;
             public readonly Vector3 dir;
             public readonly Color32 color;
             public readonly float radius;
+            public readonly int layerMask;
 
             public void Draw(ProceduralMesh_RayGizmo gizmo)
             {
                 gizmo.gameObject.SetActive(true);
                 gizmo.Draw(startPosition, dir, radius);
+                gizmo.gameObject.layer = layerMask;
                 gizmo.material.SetColor("_BaseColor", color);
             }
         }
-        
+
         readonly struct ShapeCommandData
         {
-            public ShapeCommandData(Vector3 position, Vector3 dir, Color32 color, float scale)
+            public ShapeCommandData(Vector3 position, Vector3 dir, Color32 color, int layerMask, float scale)
             {
                 this.startPosition = position;
                 this.dir = dir;
                 this.color = color;
                 this.scale = scale;
+                this.layerMask = layerMask;
             }
             public readonly Vector3 startPosition;
             public readonly Vector3 dir;
             public readonly Color32 color;
             public readonly float scale;
+            public readonly int layerMask;
 
             public void Draw(GameObject gizmo)
             {
                 gizmo.gameObject.SetActive(true);
                 gizmo.transform.localScale = Vector3.one * scale;
                 gizmo.transform.position = startPosition;
+                gizmo.layer = layerMask;
                 gizmo.GetComponent<MeshRenderer>().material.SetColor("_BaseColor", color);
                 if (dir != Vector3.zero)
                 {
