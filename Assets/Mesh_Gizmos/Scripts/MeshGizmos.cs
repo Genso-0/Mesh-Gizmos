@@ -13,16 +13,16 @@ namespace Mesh_Gizmos
         {
             get
             {
-                m_Instance = FindObjectOfType<MeshGizmos>();
                 if (m_Instance == null)
                 {
-                    Debug.LogError("Instance not in scene!");
+                    print("FindObjectOfType all was invoked MeshGizmos");
+                    m_Instance = FindObjectOfType<MeshGizmos>();
                 }
-                else if (!m_Instance.initialized)
-                {
+                if (m_Instance == null)
+                    return null;
+                if (!m_Instance.initialized)
                     m_Instance.Init();
-                }
-                return m_Instance;
+                return m_Instance; 
             }
         }
         public bool initialized { get; private set; }
@@ -43,9 +43,13 @@ namespace Mesh_Gizmos
 
         bool needsClearing;
         public bool active;
+        void Awake()
+        {
+            Init();
+        }
         void Init()
         {
-            if (!initialized)
+            if (!initialized && Application.isPlaying)
             {
                 initialized = true;
                 DontDestroyOnLoad(this);
