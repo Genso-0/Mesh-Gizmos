@@ -171,6 +171,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sun: {fileID: 5359352214677208668}
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 1
 --- !u!54 &20223751
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -297,6 +300,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sun: {fileID: 5359352214677208668}
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 1
 --- !u!54 &93114775
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -571,6 +577,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sun: {fileID: 5359352214677208668}
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 1
 --- !u!54 &409176201
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -759,6 +768,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sun: {fileID: 5359352214677208668}
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 1
 --- !u!54 &431634195
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -823,6 +835,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sun: {fileID: 5359352214677208668}
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 1
 --- !u!54 &536396665
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -949,6 +964,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sun: {fileID: 5359352214677208668}
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 1
 --- !u!54 &635430231
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1075,6 +1093,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sun: {fileID: 5359352214677208668}
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 1
 --- !u!54 &671518645
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1253,6 +1274,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sun: {fileID: 5359352214677208668}
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 1
 --- !u!54 &925122610
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1379,6 +1403,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sun: {fileID: 5359352214677208668}
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 1
 --- !u!54 &1158637795
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1505,6 +1532,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sun: {fileID: 5359352214677208668}
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 1
 --- !u!54 &1311043412
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1631,6 +1661,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sun: {fileID: 5359352214677208668}
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 1
 --- !u!54 &1358053982
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2071,6 +2104,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sun: {fileID: 5359352214677208668}
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 1
 --- !u!54 &1655074814
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2197,6 +2233,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sun: {fileID: 5359352214677208668}
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 1
 --- !u!54 &1744570038
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2323,6 +2362,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sun: {fileID: 5359352214677208668}
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 1
 --- !u!54 &1757776629
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2449,6 +2491,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sun: {fileID: 5359352214677208668}
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 1
 --- !u!54 &1782524229
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2575,6 +2620,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sun: {fileID: 5359352214677208668}
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 1
 --- !u!54 &1938553405
 Rigidbody:
   m_ObjectHideFlags: 0

@@ -11,6 +11,9 @@ namespace Mesh_Gizmos.Examples
         Vector3 startPosition;
         Vector3 gravitationalForce;
         MeshGizmos _Gizmos;
+        [SerializeField] LayerMask layerMask = 1;
+        LayerMask previous_LayerMask = 1;
+        LayerMask toBeUsedInSystemsMask { get { return layerMask - 1; } }
         void Start()
         {
             _Gizmos = MeshGizmos.Instance;
@@ -27,12 +30,16 @@ namespace Mesh_Gizmos.Examples
             rb.AddForce(gravitationalForce);
         
         }
+        void OnValidate()
+        {
+            MakeSureWeSelectOnlyOnLayer();
+        }
         void Update()
         {
-            _Gizmos.DrawRay(transform.position, gravitationalForce, Color.red);
-            _Gizmos.DrawArrowHead(transform.position + gravitationalForce, gravitationalForce, Color.white);
-            _Gizmos.DrawRay(transform.position, rb.velocity, Color.blue);
-            _Gizmos.DrawArrowHead(transform.position + rb.velocity, rb.velocity, Color.white);
+            _Gizmos.DrawRay(transform.position, gravitationalForce, Color.red, toBeUsedInSystemsMask);
+            _Gizmos.DrawArrowHead(transform.position + gravitationalForce, gravitationalForce, Color.white, toBeUsedInSystemsMask);
+            _Gizmos.DrawRay(transform.position, rb.velocity, Color.blue, toBeUsedInSystemsMask);
+            _Gizmos.DrawArrowHead(transform.position + rb.velocity, rb.velocity, Color.white, toBeUsedInSystemsMask);
         }
         void OnCollisionEnter(Collision collision)
         {
@@ -50,7 +57,25 @@ namespace Mesh_Gizmos.Examples
             float acceleration = (9.81f * rb.mass * rb_gravityCenter.mass) / (mag * mag);
             gravitationalForce = dir * Time.deltaTime * acceleration;
         }
-   
+        private void MakeSureWeSelectOnlyOnLayer()
+        {
+            if (CountOnBits(layerMask) > 1)
+            {
+                layerMask &= ~previous_LayerMask;
+            }
+            previous_LayerMask = layerMask;
+        }
+
+        public int CountOnBits(int x)
+        {
+            int count = 0;
+            while (x != 0)
+            {
+                if ((x & 1) != 0) count++;
+                x = x >> 1;
+            }
+            return count;
+        }
         void OnDrawGizmos()
         {
             var perpendicularForce = Vector3.Cross(gravitationalForce.normalized, transform.up);
